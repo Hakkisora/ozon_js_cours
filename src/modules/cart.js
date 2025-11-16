@@ -13,8 +13,6 @@ const cart = () => {
 
     cartBtn.addEventListener('click', openCart)
     cartClsBtn.addEventListener('click', closeCart)
-
-    console.dir(openCart)
 }
 
 module.exports = cart
