@@ -1,13 +1,7 @@
-const postData = () => {
-    return fetch('https://ozon-7cd58-default-rtdb.firebaseio.com/goods.json', {
+const postData = (data) => {
+    return fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'POST',
-        body: JSON.stringify({
-            title: "Everlustind summer",
-            price: 0,
-            sale: true,
-            img: "https://cdn1.ozone.ru/multimedia/c400/1023547851.jpg",
-            category: "Игры и софт"
-        }),
+        body: JSON.stringify(data),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
         },

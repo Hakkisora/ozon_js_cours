@@ -22,9 +22,21 @@ const priceFilterMin = (goods, array) => {
     })
 }
 
+const saleFilter = (goods, state) => {
+
+    if (state) {
+        return goods.filter((goodsItem) => {
+            return goodsItem.sale === state
+        })
+    } else {
+        return goods
+    }
+}
+
 module.exports = {
     searchFilter,
     catalogFilter,
     priceFilterMax,
-    priceFilterMin
+    priceFilterMin,
+    saleFilter
 }

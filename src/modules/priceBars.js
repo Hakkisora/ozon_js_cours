@@ -13,12 +13,11 @@ const priceBars = () => {
             if (parseInt(maxPrice) <= parseInt(item.price)) {
                 maxPrice = item.price
                 pricesArray = [minPrice, maxPrice]
-                console.log(maxPrice)
             }
         })
     })
 
-    console.log(barMin, barMax, pricesArray)
+    pricesArray = [minPrice, maxPrice]
 
     barMin.addEventListener('input', (event) => {
         pricesArray[0] = (event.target.value)
